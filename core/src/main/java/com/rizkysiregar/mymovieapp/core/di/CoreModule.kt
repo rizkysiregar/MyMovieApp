@@ -2,6 +2,7 @@ package com.rizkysiregar.mymovieapp.core.di
 
 
 import androidx.room.Room
+import com.rizkysiregar.mymovieapp.core.BuildConfig
 import com.rizkysiregar.mymovieapp.core.data.MovieRepository
 import com.rizkysiregar.mymovieapp.core.data.source.local.LocalDataSource
 import com.rizkysiregar.mymovieapp.core.data.source.local.room.MovieDatabase
@@ -38,12 +39,13 @@ val databaseModule = module {
 val networkModule = module {
     single {
         // ADD CERTIFICATE PINNING
+        val loggingInterceptor = if(BuildConfig.DEBUG) { HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY) }else { HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE) }
         val hostname = "api.themoviedb.org"
         val certificatePinner = CertificatePinner.Builder()
             .add(hostname, "sha256/p+WeEuGncQbjSKYPSzAaKpF/iLcOjFLuZubtsXupYSI=")
             .build()
         OkHttpClient.Builder()
-            .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+            .addInterceptor(loggingInterceptor)
             .connectTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, TimeUnit.SECONDS)
             .certificatePinner(certificatePinner)
