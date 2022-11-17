@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyMovieApp</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="tv_error_message">Ada kesalahan, coba beberapa saat lagi ...</string>
+    <string name="poster_dari_movie">poster dari movie</string>
+    <string name="fab_for_favorite_action">fab for favorite action</string>
+    <string name="menu_favorite">menu favorite</string>
+    <string name="right_to_tmdb_api">right to tmdb api</string>
+    <string name="appwidget_text">My Movie App - Dicoding Submission</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="halaman_about_tmdb">Halaman About TMDB</string>
+
+</resources>

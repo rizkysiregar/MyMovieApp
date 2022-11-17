@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailActivity">
+
+    <ImageView
+        android:id="@+id/iv_poster_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/poster_dari_movie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="fitXY"
+        android:padding="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_favorite"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/fab_for_favorite_action"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_poster_detail"
+        app:layout_constraintEnd_toEndOf="@id/iv_poster_detail"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="@+id/iv_poster_detail"
+        app:layout_constraintTop_toTopOf="@+id/iv_poster_detail"
+        app:layout_constraintVertical_bias="0.952" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/bg_detail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_poster_detail">
+
+        <TextView
+            android:id="@+id/tv_title_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:background="@color/white"
+            android:maxLength="50"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:elegantTextHeight="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/title_preview" />
+
+        <TextView
+            android:id="@+id/tv_original_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/tv_title_detail"
+            app:layout_constraintStart_toStartOf="@+id/tv_title_detail"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_detail"
+            tools:text="@string/title_preview" />
+
+        <TextView
+            android:id="@+id/tv_original_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/tv_original_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_original_title"
+            tools:text="Original Language: English" />
+
+        <TextView
+            android:id="@+id/tv_release_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="1dp"
+            android:text="@string/release_date_preview"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_original_language"
+            app:layout_constraintTop_toBottomOf="@+id/tv_original_language" />
+
+        <TextView
+            android:id="@+id/tv_popularity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tv_release_date"
+            android:layout_marginTop="8dp"
+            android:padding="1dp"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/tv_release_date"
+            app:layout_constraintTop_toBottomOf="@+id/tv_release_date"
+            tools:text="Popularity: 3803.184" />
+
+
+        <TextView
+            android:id="@+id/tv_overview"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tv_popularity"
+            app:layout_constraintStart_toStartOf="@+id/tv_popularity"
+            app:layout_constraintTop_toBottomOf="@+id/tv_popularity"
+            tools:text="@string/overview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

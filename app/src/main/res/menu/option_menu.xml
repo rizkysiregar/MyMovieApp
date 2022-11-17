@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:menuCategory="container">
+        <item
+            android:id="@+id/menu_favorite"
+            android:title="@string/menu_favorite"
+            android:icon="@drawable/ic_baseline_favorite_red_24"
+            app:showAsAction="ifRoom"
+            />
+
+        <item
+            android:id="@+id/menu_about"
+            android:title="@string/halaman_about_tmdb"
+            app:showAsAction="never"
+            />
+
+
+
+    </group>
+
+</menu>
