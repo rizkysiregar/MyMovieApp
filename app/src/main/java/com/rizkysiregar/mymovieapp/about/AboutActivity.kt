@@ -11,7 +11,6 @@ import com.rizkysiregar.mymovieapp.databinding.ActivityAboutBinding
 class AboutActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityAboutBinding
-    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAboutBinding.inflate(layoutInflater)

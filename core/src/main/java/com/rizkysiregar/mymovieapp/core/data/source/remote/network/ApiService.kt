@@ -1,7 +1,4 @@
 package com.rizkysiregar.mymovieapp.core.data.source.remote.network
-
-
-
 import com.rizkysiregar.mymovieapp.core.BuildConfig
 import com.rizkysiregar.mymovieapp.core.data.source.remote.response.DiscoverResponse
 import retrofit2.http.GET

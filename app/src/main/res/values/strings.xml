@@ -9,5 +9,10 @@
     <string name="appwidget_text">My Movie App - Dicoding Submission</string>
     <string name="app_widget_description">This is an app widget description</string>
     <string name="halaman_about_tmdb">Halaman About TMDB</string>
+    <string name="title_movie">"Title: %s"</string>
+    <string name="original_title">"Original Title: %s"</string>
+    <string name="original_lang">"Original Language: %s"</string>
+    <string name="release_date">"Release Date: %s"</string>
+    <string name="popularity">"Popularity: %f"</string>
 
 </resources>

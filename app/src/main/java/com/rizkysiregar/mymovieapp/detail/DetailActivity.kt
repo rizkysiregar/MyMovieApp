@@ -26,6 +26,7 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        @Suppress("DEPRECATION")
         val movieData = if (Build.VERSION.SDK_INT >= 33) {
             intent.getParcelableExtra(KEY, Movie::class.java)
         } else {
@@ -35,7 +36,6 @@ class DetailActivity : AppCompatActivity() {
         showDetailMovie(movieData)
     }
 
-    @SuppressLint("SetTextI18n")
     private fun showDetailMovie(movie: Movie?) {
         movie?.let { movie ->
             supportActionBar?.title = movie.title
@@ -44,11 +44,11 @@ class DetailActivity : AppCompatActivity() {
                 .load(BASE_URL_IMAGE + movie.posterPath)
                 .into(binding.ivPosterDetail)
 
-            binding.tvTitleDetail.text = "Title: ${movie.title}"
-            binding.tvOriginalTitle.text = "Original Title: ${movie.originalTitle}"
-            binding.tvOriginalLanguage.text = "Original Language: ${movie.originalLanguage}"
-            binding.tvReleaseDate.text = "Release Data: ${movie.releaseDate}"
-            binding.tvPopularity.text = "Popularity: ${movie.popularity}"
+            binding.tvTitleDetail.text = resources.getString(R.string.title_movie, movie.title)
+            binding.tvOriginalTitle.text = resources.getString(R.string.original_title, movie.originalTitle)
+            binding.tvOriginalLanguage.text = resources.getString(R.string.original_lang,movie.originalLanguage)
+            binding.tvReleaseDate.text = resources.getString(R.string.release_date, movie.releaseDate)
+            binding.tvPopularity.text = resources.getString(R.string.popularity, movie.popularity)
             binding.tvOverview.text = movie.overview
 
             var isFavorite = movie.favorite
