@@ -1,6 +1,5 @@
 package com.rizkysiregar.mymovieapp.about
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebView

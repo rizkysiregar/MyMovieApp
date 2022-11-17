@@ -13,6 +13,10 @@ android {
 
     def apiKey = "424a7aa7ecc298c1dcdc06e74d03671d"
 
+    lintOptions {
+        abortOnError false
+    }
+
     defaultConfig {
         minSdk 21
         targetSdk 33

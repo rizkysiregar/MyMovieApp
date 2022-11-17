@@ -9,6 +9,10 @@ android {
     namespace 'com.rizkysiregar.mymovieapp'
     compileSdk 33
 
+    lintOptions {
+        abortOnError false
+    }
+
     defaultConfig {
         applicationId "com.rizkysiregar.mymovieapp"
         minSdk 21
