@@ -95,4 +95,9 @@ class HomeActivity : AppCompatActivity() {
             }
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.rvMovie.adapter = null
+    }
 }

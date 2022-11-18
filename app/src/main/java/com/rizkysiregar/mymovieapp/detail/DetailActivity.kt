@@ -1,6 +1,5 @@
 package com.rizkysiregar.mymovieapp.detail
 
-import android.annotation.SuppressLint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -30,7 +29,7 @@ class DetailActivity : AppCompatActivity() {
         val movieData = if (Build.VERSION.SDK_INT >= 33) {
             intent.getParcelableExtra(KEY, Movie::class.java)
         } else {
-            intent.getParcelableExtra<Movie>(KEY)
+            intent.getParcelableExtra(KEY)
         }
 
         showDetailMovie(movieData)
@@ -68,4 +67,5 @@ class DetailActivity : AppCompatActivity() {
             binding.fabFavorite.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.ic_baseline_favorite_border_24))
         }
     }
+
 }

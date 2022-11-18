@@ -1,5 +1,6 @@
 package com.rizkysiregar.mymovieapp.about
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebView
@@ -7,9 +8,11 @@ import android.webkit.WebViewClient
 import android.widget.Toast
 import com.rizkysiregar.mymovieapp.databinding.ActivityAboutBinding
 
+@SuppressLint("SetJavaScriptEnabled")
 class AboutActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityAboutBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAboutBinding.inflate(layoutInflater)
@@ -26,4 +29,6 @@ class AboutActivity : AppCompatActivity() {
         }
         webView.loadUrl("https://www.themoviedb.org/about")
     }
+
+
 }

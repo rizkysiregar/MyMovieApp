@@ -2,7 +2,7 @@
 <resources>
     <string name="poster_image">Poster Image</string>
     <string name="title_preview">Title: John Wick: Chapter 3 - Parabellum</string>
-    <string name="release_date_preview">release date: 2022-10-06</string>
+    <string name="release_date_preview">release date: 2022–10–06</string>
     <string name="is_adult_rating_content">is adult rating content</string>
     <string name="release_date">Release Data: %s</string>
     <string name="overview">After being resurrected by a sinister entity, Art the Clown returns to Miles County where he must hunt down and destroy a teenage girl and her younger brother on Halloween night.  As the body count rises, the siblings fight to stay alive while uncovering the true nature of Art\'s evil intent.</string>
