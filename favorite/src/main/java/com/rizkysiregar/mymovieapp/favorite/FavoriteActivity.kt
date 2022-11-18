@@ -50,4 +50,9 @@ class FavoriteActivity : AppCompatActivity() {
             binding.tvEmpty.visibility = View.VISIBLE
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.rvMovie.adapter = null
+    }
 }

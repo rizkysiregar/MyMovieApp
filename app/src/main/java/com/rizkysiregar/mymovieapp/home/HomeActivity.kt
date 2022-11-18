@@ -100,4 +100,5 @@ class HomeActivity : AppCompatActivity() {
         super.onDestroy()
         binding.rvMovie.adapter = null
     }
+
 }
